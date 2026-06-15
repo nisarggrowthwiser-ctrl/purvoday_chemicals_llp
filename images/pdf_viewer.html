@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PDF Renderer</title>
+    <script src="pdf.min.js"></script>
+    <script src="pdf.worker.min.js"></script>
+    <style>
+        body { margin: 0; padding: 0; background: white; font-family: sans-serif; }
+        canvas { display: block; }
+        #log { font-size: 16px; color: black; word-wrap: break-word; padding: 20px; }
+    </style>
+</head>
+<body>
+    <div id="log">Status: Initialized...</div>
+    <canvas id="pdf-canvas"></canvas>
+    <script>
+        // Keep-alive for headless chrome virtual time budget
+        setInterval(() => {
+            console.log('Virtual-time keepalive tick: ' + Date.now());
+        }, 100);
+
+        function logMsg(msg, isError = false) {
+            console.log(msg);
+            const logDiv = document.getElementById('log');
+            if (isError) {
+                logDiv.innerHTML += '<br><span style="color:red">ERROR: ' + msg + '</span>';
+            } else {
+                logDiv.innerHTML += '<br><span style="color:green">INFO: ' + msg + '</span>';
+            }
+        }
+
+        // Global Error Handlers
+        window.onerror = function(message, source, lineno, colno, error) {
+            logMsg('Global Error: ' + message + ' at ' + source + ':' + lineno, true);
+            return false;
+        };
+
+        window.onunhandledrejection = function(event) {
+            logMsg('Unhandled Rejection: ' + event.reason, true);
+        };
+
+        try {
+            // Get page from URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const pageNum = parseInt(urlParams.get('page')) || 1;
+            
+            const pdfPath = 'PURVODAY%20CHEMICALS%20LLP.pdf';
+            logMsg('Loading page ' + pageNum + ' from PDF: ' + pdfPath);
+
+            pdfjsLib.getDocument({
+                url: pdfPath,
+                disableWorker: true
+            }).promise.then(pdf => {
+                logMsg('PDF loaded successfully. Total pages: ' + pdf.numPages);
+                if (pageNum < 1 || pageNum > pdf.numPages) {
+                    throw new Error('Invalid page number: ' + pageNum);
+                }
+                return pdf.getPage(pageNum);
+            }).then(page => {
+                logMsg('Page ' + pageNum + ' retrieved.');
+                const viewport = page.getViewport({ scale: 2.0 });
+                const canvas = document.getElementById('pdf-canvas');
+                const context = canvas.getContext('2d');
+                canvas.height = viewport.height;
+                canvas.width = viewport.width;
+
+                const renderContext = {
+                    canvasContext: context,
+                    viewport: viewport
+                };
+                return page.render(renderContext).promise;
+            }).then(() => {
+                logMsg('PDF Rendered successfully!');
+                document.title = 'READY';
+                document.getElementById('log').style.display = 'none';
+            }).catch(err => {
+                logMsg('Promise Catch: ' + err.toString(), true);
+                document.title = 'ERROR';
+            });
+        } catch (e) {
+            logMsg('Outer Catch: ' + e.toString(), true);
+        }
+    </script>
+</body>
+</html>

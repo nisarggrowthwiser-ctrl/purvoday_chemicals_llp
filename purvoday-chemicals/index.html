@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Purvoday Chemicals LLP - Global Supplier of Industrial Solvents & Chemical Solutions. Sourcing partner across India and global markets.">
+    <title>Purvoday Chemicals LLP | Sourcing & Distribution Solvents</title>
+    <!-- Styling stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- GSAP for advanced mouse over and magnetic actions -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- ScrollReveal for modern scroll reveals -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body id="body" class="tt-smooth-scroll tt-magic-cursor">
+
+    <!-- MAGIC CURSOR NODE -->
+    <div id="magic-cursor">
+        <div id="ball"></div>
+    </div>
+
+    <!-- TOPBAR AREA -->
+    <div class="topbar-area">
+        <ul class="topbar-right">
+            <li>
+                <a href="mailto:exports@purvodaychemicals.com">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10">
+                        <path d="M12.8333 0H1.16668C0.523223 0 0 0.498307 0 1.11112V8.88891C0 9.50169 0.523223 10 1.16668 10H12.8334C13.4768 10 14 9.50169 14 8.88888V1.11112C14 0.498307 13.4768 0 12.8333 0ZM1.16668 0.555547H12.8334C12.8763 0.555547 12.9142 0.570469 12.9545 0.578906C11.9445 1.4593 8.59532 4.37732 7.42328 5.38302C7.33157 5.46169 7.18375 5.55555 7.00003 5.55555C6.8163 5.55555 6.66848 5.46169 6.57647 5.38276C5.40455 4.37721 2.05518 1.45904 1.0453 0.578958C1.08571 0.570521 1.12366 0.555547 1.16668 0.555547ZM0.583324 8.88888V1.11112C0.583324 1.05669 0.600551 1.00732 0.615973 0.957578C1.38904 1.63143 3.72594 3.66747 5.24122 4.97979C3.73086 6.21539 1.39336 8.32602 0.614141 9.03367C0.600387 8.98643 0.583324 8.94023 0.583324 8.88888ZM12.8333 9.44445H1.16668C1.12008 9.44445 1.07866 9.42898 1.03515 9.41909C1.84034 8.68805 4.19273 6.56529 5.67654 5.35635C5.8461 5.50294 6.0159 5.64928 6.18595 5.79536C6.42636 6.00208 6.70775 6.11112 7 6.11112C7.29225 6.11112 7.57364 6.00206 7.81375 5.79562C7.98389 5.64945 8.1538 5.50303 8.32347 5.35635C9.80736 6.56516 12.1594 8.68776 12.9648 9.41909C12.9213 9.42898 12.88 9.44445 12.8333 9.44445ZM13.4167 8.88888C13.4167 8.94021 13.3996 8.98643 13.3859 9.03367C12.6064 8.32565 10.2691 6.21526 8.7588 4.97982C10.2741 3.6675 12.6107 1.63164 13.384 0.957526C13.3994 1.00727 13.4167 1.05667 13.4167 1.11109V8.88888Z" />
+                    </svg>
+                    <span>exports@purvodaychemicals.com</span>
+                </a>
+            </li>
+            <li>
+                <a href="tel:+917265053000">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
+                        <path d="M12.8766 9.18937C12.0195 9.18937 11.1779 9.05531 10.3804 8.79176C9.98274 8.65617 9.53004 8.76139 9.27064 9.02571L7.69648 10.214C5.87091 9.23954 4.74639 8.11538 3.7852 6.30352L4.93856 4.77038C5.23821 4.47113 5.34569 4.03399 5.21692 3.62384C4.95223 2.82212 4.81777 1.98092 4.81777 1.12342C4.81781 0.503962 4.31385 0 3.69442 0H1.12335C0.503962 0 0 0.503962 0 1.12335C0 8.22363 5.77637 14 12.8766 14C13.496 14 14 13.496 14 12.8766V10.3127C14 9.69333 13.496 9.18937 12.8766 9.18937ZM13.2222 12.8766C13.2222 13.0673 13.0673 13.2222 12.8766 13.2222C6.20512 13.2222 0.7778 7.79484 0.7778 1.12339C0.7778 0.932747 0.932748 0.7778 1.12339 0.7778H3.69446C3.8851 0.7778 4.04005 0.932747 4.04005 1.12339C4.04005 2.06408 4.18778 2.98731 4.47678 3.86195C4.51703 3.99108 4.48436 4.12474 4.35373 4.26073L3.01692 6.03118C2.97302 6.08933 2.94633 6.15864 2.93988 6.23121C2.93344 6.30379 2.9475 6.37672 2.98046 6.4417C4.07155 8.58628 5.39735 9.91208 7.5571 11.0187C7.6885 11.0875 7.84953 11.0731 7.96879 10.983L9.77992 9.61094C9.8252 9.56579 9.88218 9.53419 9.94445 9.5197C10.0067 9.50521 10.0718 9.5084 10.1324 9.52891C11.013 9.81981 11.9363 9.96717 12.8766 9.96717C13.0673 9.96717 13.2222 10.1221 13.2222 10.3128V12.8766Z" />
+                    </svg> +91 72650 53000
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- HEADER AREA -->
+    <header class="header-area style-1" id="header">
+        <div class="header-logo" style="padding: 10px 30px;">
+            <a href="#home" class="logo" style="text-decoration:none; display: flex; align-items: center;">
+                <img src="images/logo.png" alt="Purvoday Chemicals LLP" style="max-height: 48px; width: auto; object-fit: contain;">
+            </a>
+        </div>
+        <div class="menu-wrap">
+            <nav class="main-menu">
+                <ul class="menu-list" id="menu-list">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#who-we-are">Who We Are</a></li>
+                    <li><a href="#team">Leadership</a></li>
+                    <li><a href="#portfolio">Our Products</a></li>
+                    <li><a href="#industries">Industries</a></li>
+                    <li><a href="#network">Network</a></li>
+                </ul>
+            </nav>
+            <div class="nav-right">
+                <a href="#contact" class="header-btn">
+                    Get in Touch
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.1865 1.06237L0 11.2484L0.751627 12L10.9376 1.81347V8.85645H12V0H3.14355V1.06237H10.1865Z" />
+                    </svg>
+                    <span></span>
+                </a>
+                <div class="mobile-menu-btn" id="mobile-menu-btn">
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- PAGE 1: COVER COVER -->
+    <div class="banner1-section mb-130" id="home">
+        <div class="banner-top">
+            <div class="container-fluid one">
+                <div class="row align-items-center" style="display: flex; justify-content: space-between; flex-wrap: wrap;">
+                    <div class="banner-content" style="max-width: 800px;">
+                        <span>Purvoday Chemicals LLP</span>
+                        <h1>Global Supplier of<br><span style="color: var(--secondary-color);">Industrial Solvents & Chemical Solutions</span></h1>
+                    </div>
+                    <div class="banner-btn magnetic-item">
+                        <a href="#portfolio">
+                            <div class="bg">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="140" height="140" viewBox="0 0 178 178">
+                                    <path d="M107.104 13.1663L91.9409 2.13881C90.1876 0.863714 87.8124 0.863712 86.0591 2.1388L70.8963 13.1663C69.9429 13.8597 68.7751 14.1939 67.5992 14.1099L47.8337 12.6981C45.8159 12.554 43.91 13.6399 43.0053 15.4493L34.5654 32.3293C34.0815 33.2969 33.2969 34.0815 32.3293 34.5654L15.4493 43.0053C13.64 43.91 12.554 45.8159 12.6981 47.8337L14.1099 67.5992C14.1939 68.7751 13.8597 69.9429 13.1663 70.8963L2.13881 86.0591C0.863714 87.8124 0.863712 90.1876 2.1388 91.9409L13.1663 107.104C13.8597 108.057 14.1939 109.225 14.1099 110.401L12.6981 130.166C12.554 132.184 13.6399 134.09 15.4493 134.995L32.3293 143.435C33.2969 143.918 34.0815 144.703 34.5654 145.671L43.0053 162.551C43.91 164.36 45.8159 165.446 47.8337 165.302L67.5992 163.89C68.7751 163.806 69.9429 164.14 70.8963 164.834L86.0591 175.861C87.8124 177.136 90.1876 177.136 91.9409 175.861L107.104 164.834C108.057 164.14 109.225 163.806 110.401 163.89L130.166 165.302C132.184 165.446 134.09 164.36 134.995 162.551L143.435 145.671C143.918 144.703 144.703 143.918 145.671 143.435L162.551 134.995C164.36 134.09 165.446 132.184 165.302 130.166L163.89 110.401C163.806 109.225 164.14 108.057 164.834 107.104L175.861 91.9409C177.136 90.1876 177.136 87.8124 175.861 86.0591L164.834 70.8963C164.14 69.9429 163.806 68.7751 163.89 67.5992L165.302 47.8337C165.446 45.8159 164.36 43.91 162.551 43.0053L145.671 34.5654C144.703 34.0815 143.918 33.2969 143.435 32.3293L134.995 15.4493C134.09 13.64 132.184 12.554 130.166 12.6981L110.401 14.1099C109.225 14.1939 108.057 13.8597 107.104 13.1663Z"></path>
+                                </svg>
+                            </div>
+                            <div class="btn-content">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.1865 1.06237L0 11.2484L0.751627 12L10.9376 1.81347V8.85645H12V0H3.14355V1.06237H10.1865Z"></path>
+                                </svg> <br> Explore <br> Now
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="banner-bottom">
+            <div class="container-fluid one">
+                <div class="row align-items-center" style="display: flex; gap: 3rem; flex-wrap: wrap;">
+                    <div class="col-lg-7" style="flex: 1 1 500px;">
+                        <div class="banner-bottom-img">
+                            <img src="images/hero-chemical.png" alt="Purvoday Chemical Tanks">
+                        </div>
+                    </div>
+                    <div class="col-lg-5" style="flex: 1 1 400px;">
+                        <div class="banner-right-content pl--95">
+                            <p class="mb-20" style="font-size: 19px; line-height: 1.6; font-weight: 500;">Trusted Partner For Bulk Chemical Sourcing Across Indian & Global Markets.</p>
+                            <p style="font-size: 15px; line-height: 1.7; color: var(--paragraph-color);">We specialize in bulk warehousing, precision ISO tank logistics, raw material assay certifications, and customized drum container distributions. Helping paint manufacturers, pharma laboratories, and ink producers secure consistent industrial solvents.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 2: ABOUT US -->
+    <div class="banner1-section mb-130" id="about" style="background-color: var(--bg-alt); padding: 90px 0; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+        <div class="container-fluid one">
+            <div class="row align-items-center" style="display: flex; gap: 4rem; flex-wrap: wrap;">
+                <div class="col-lg-6" style="flex: 1 1 500px;">
+                    <div class="banner-right-content pr--95">
+                        <div class="section-title1 two">
+                            <span>Corporate Overview</span>
+                            <h2 style="padding-top: 10px; line-height: 1.25;">Premier Chemical Distribution & Bulk Solvents Sourcing Partner</h2>
+                        </div>
+                        <p class="mb-20" style="font-size: 16px; font-weight: 500;">Purvoday Chemicals LLP is a Gujarat-based chemical trading and distribution powerhouse specializing in high-grade industrial solvents, intermediate compounds, and raw chemical supply chains globally.</p>
+                        <p class="mb-20" style="font-size: 14.5px;">With strategic operating offices in Ankleshwar, India's chemical corridor, we build our distribution pipelines around absolute purity, optimized freight metrics, and resilient supply agreements. Over a decade of B2B distribution expertise enables us to source critical solvents directly from ISO-certified manufacturing refineries, managing multi-ton consignments and customized storage packing terms for manufacturers across sectors.</p>
+                        <p class="mb-20" style="font-size: 14.5px;">Our state-of-the-art warehouses are designed for safe hazardous materials management, maintaining ready stocks to prevent manufacturing downtimes. From container space planning to custom assay certificates (COA), our operations ensure that global shipping meets exact technical certifications.</p>
+                        
+                        <div class="card-tags" style="margin-top: 2.5rem; gap: 12px;">
+                            <span style="font-weight: 600; padding: 6px 12px; border-color: var(--secondary-color);"><i class="fa-solid fa-square-check" style="color: var(--secondary-color); margin-right: 5px;"></i> Quality Assured</span>
+                            <span style="font-weight: 600; padding: 6px 12px; border-color: var(--secondary-color);"><i class="fa-solid fa-square-check" style="color: var(--secondary-color); margin-right: 5px;"></i> ISO Compliance</span>
+                            <span style="font-weight: 600; padding: 6px 12px; border-color: var(--secondary-color);"><i class="fa-solid fa-square-check" style="color: var(--secondary-color); margin-right: 5px;"></i> B2B Pricing Metrics</span>
+                            <span style="font-weight: 600; padding: 6px 12px; border-color: var(--secondary-color);"><i class="fa-solid fa-square-check" style="color: var(--secondary-color); margin-right: 5px;"></i> Custom Logistics</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" style="flex: 1 1 500px;">
+                    <div class="banner-bottom-img" style="height: 520px; box-shadow: 0 20px 40px rgba(0,0,0,0.06);">
+                        <img src="images/warehouse-logistics.png" alt="Chemical Warehouse Operations">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 3: WHO WE ARE -->
+    <div class="banner1-section mb-130" id="who-we-are">
+        <div class="container-fluid one">
+            <div class="section-title1 text-center" style="margin: 0 auto 50px auto;">
+                <span>Corporate Values</span>
+                <h2>Who We Are</h2>
+            </div>
+            <p style="text-align: center; max-width: 900px; margin: 0 auto 40px auto; font-size: 18px; color: var(--paragraph-color);">
+                At Purvoday Chemicals, we believe that trust, consistency, and transparency are the foundation of successful business relationships. Our company specializes in sourcing, stocking, and supplying industrial solvents used across:
+            </p>
+
+            <div class="card-tags" style="justify-content: center; display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 50px;">
+                <span style="font-size: 14px; padding: 6px 15px;">Paints & Coatings</span>
+                <span style="font-size: 14px; padding: 6px 15px;">Pharmaceuticals</span>
+                <span style="font-size: 14px; padding: 6px 15px;">Adhesives</span>
+                <span style="font-size: 14px; padding: 6px 15px;">Printing Inks</span>
+                <span style="font-size: 14px; padding: 6px 15px;">Agrochemicals</span>
+                <span style="font-size: 14px; padding: 6px 15px;">Construction Chemicals</span>
+                <span style="font-size: 14px; padding: 6px 15px;">Specialty Chemicals</span>
+            </div>
+
+            <div class="row" style="display: flex; gap: 40px; flex-wrap: wrap; border-top: 1px solid var(--border-color); padding-top: 40px;">
+                <div style="flex: 1; min-width: 280px; display: flex; gap: 15px;">
+                    <div class="single-counter" style="align-items: flex-start;"><i class="fa-solid fa-eye" style="font-size: 24px; color: var(--secondary-color);"></i></div>
+                    <div>
+                        <h4 style="font-size: 18px; text-transform: uppercase;">Vision Statement</h4>
+                        <p style="color: var(--paragraph-color);">To become a globally trusted chemical sourcing company.</p>
+                    </div>
+                </div>
+                <div style="flex: 1; min-width: 280px; display: flex; gap: 15px;">
+                    <div class="single-counter" style="align-items: flex-start;"><i class="fa-solid fa-bullseye" style="font-size: 24px; color: var(--secondary-color);"></i></div>
+                    <div>
+                        <h4 style="font-size: 18px; text-transform: uppercase;">Mission Statement</h4>
+                        <p style="color: var(--paragraph-color);">To provide quality chemical solutions with integrity and efficiency.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 4: LEADERSHIP TEAM -->
+    <div class="banner1-section mb-130" id="team" style="background-color: var(--bg-alt); padding: 80px 0;">
+        <div class="container-fluid one">
+            <div class="section-title1 text-center" style="margin: 0 auto 60px auto;">
+                <span>Board Members</span>
+                <h2>Leadership Team</h2>
+            </div>
+            
+            <div class="eg-slider-wrap">
+                <!-- HR Vekariya -->
+                <div class="eg-card3">
+                    <div class="eg-card3-img">
+                        <i class="fa-solid fa-user-tie"></i>
+                    </div>
+                    <div class="card-content">
+                        <div class="catgory-and-title">
+                            <a>Global Business Head</a>
+                            <h5>HR Vekariya</h5>
+                        </div>
+                        <p>Leading international business development, customer acquisition, strategic partnerships, and global market expansion.</p>
+                    </div>
+                </div>
+
+                <!-- Keyur Patel -->
+                <div class="eg-card3">
+                    <div class="eg-card3-img">
+                        <i class="fa-solid fa-user-tie"></i>
+                    </div>
+                    <div class="card-content">
+                        <div class="catgory-and-title">
+                            <a>Director</a>
+                            <h5>Keyur Patel</h5>
+                        </div>
+                        <p>Responsible for strategic planning, business operations, and growth management across divisions.</p>
+                    </div>
+                </div>
+
+                <!-- Nandlal Nadiyadara -->
+                <div class="eg-card3">
+                    <div class="eg-card3-img">
+                        <i class="fa-solid fa-user-tie"></i>
+                    </div>
+                    <div class="card-content">
+                        <div class="catgory-and-title">
+                            <a>Director & Investor</a>
+                            <h5>Nandlal Nadiyadara</h5>
+                        </div>
+                        <p>Providing financial strength, business guidance, and long-term strategic vision framework.</p>
+                    </div>
+                </div>
+
+                <!-- Logistics Team -->
+                <div class="eg-card3">
+                    <div class="eg-card3-img">
+                        <i class="fa-solid fa-truck-ramp-box"></i>
+                    </div>
+                    <div class="card-content">
+                        <div class="catgory-and-title">
+                            <a>Operations</a>
+                            <h5>Supply Chain Dept</h5>
+                        </div>
+                        <p>Ensuring timely procurement, chemical inventory level management, and delivery coordination.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 5: OUR PRODUCTS -->
+    <div class="banner3-section mb-130" id="portfolio">
+        <div class="container-fluid one">
+            <div class="section-title1 text-center" style="margin: 0 auto 60px auto;">
+                <span>Purvoday Products</span>
+                <h2>Core Product Portfolio</h2>
+            </div>
+            
+            <div class="eg-slider-wrap">
+                <!-- Toluene -->
+                <div class="eg-card3">
+                    <div class="eg-card3-img" style="height: 240px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                        <img src="images/drum-toluene.png" alt="Toluene Drums" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="card-content">
+                        <div class="catgory-and-title">
+                            <a href="#contact" class="product-inquire" data-product="Toluene">Industrial Solvent</a>
+                            <h5>Toluene</h5>
+                        </div>
+                        <p>High purity solvent for paints, coatings, adhesives and printing inks.</p>
+                        <div class="card-tags">
+                            <span>Paints</span>
+                            <span>Thinners</span>
+                            <span>Adhesives</span>
+                            <span>Inks</span>
+                        </div>
+                        <a href="#contact" class="primary-btn1 btn-hover product-inquire" data-product="Toluene" style="font-size: 11px; padding: 12px 20px; width: 100%; text-align: center; justify-content: center;">Inquire Spec</a>
+                    </div>
+                </div>
+
+                <!-- IPA -->
+                <div class="eg-card3">
+                    <div class="eg-card3-img" style="height: 240px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                        <img src="images/drum-ipa.png" alt="Isopropyl Alcohol Drums" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="card-content">
+                        <div class="catgory-and-title">
+                            <a href="#contact" class="product-inquire" data-product="Isopropyl Alcohol">Sanitizer & Cleaning</a>
+                            <h5>Isopropyl Alcohol (IPA)</h5>
+                        </div>
+                        <p>Used widely across pharmaceutical processes, surface sanitizers, and electronic cleaners.</p>
+                        <div class="card-tags">
+                            <span>Pharma</span>
+                            <span>Sanitizers</span>
+                            <span>Cleaning</span>
+                            <span>Electronics</span>
+                        </div>
+                        <a href="#contact" class="primary-btn1 btn-hover product-inquire" data-product="Isopropyl Alcohol" style="font-size: 11px; padding: 12px 20px; width: 100%; text-align: center; justify-content: center;">Inquire Spec</a>
+                    </div>
+                </div>
+
+                <!-- Acetone -->
+                <div class="eg-card3">
+                    <div class="eg-card3-img" style="height: 240px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                        <img src="images/drum-acetone.png" alt="Acetone Drums" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="card-content">
+                        <div class="catgory-and-title">
+                            <a href="#contact" class="product-inquire" data-product="Acetone">Chemical Intermediate</a>
+                            <h5>Acetone</h5>
+                        </div>
+                        <p>Fast evaporating key solvent in paints, cosmetics, chemical production, and adhesives.</p>
+                        <div class="card-tags">
+                            <span>Paint Industry</span>
+                            <span>Cosmetics</span>
+                            <span>Processing</span>
+                            <span>Adhesives</span>
+                        </div>
+                        <a href="#contact" class="primary-btn1 btn-hover product-inquire" data-product="Acetone" style="font-size: 11px; padding: 12px 20px; width: 100%; text-align: center; justify-content: center;">Inquire Spec</a>
+                    </div>
+                </div>
+
+                <!-- Ethyl Acetate -->
+                <div class="eg-card3">
+                    <div class="eg-card3-img" style="height: 240px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                        <img src="images/drum-ethyl-acetate.png" alt="Ethyl Acetate Drums" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="card-content">
+                        <div class="catgory-and-title">
+                            <a href="#contact" class="product-inquire" data-product="Ethyl Acetate">Packaging Ester</a>
+                            <h5>Ethyl Acetate</h5>
+                        </div>
+                        <p>Active solvent formulations designed for coatings, packaging foils, inks, and pharmaceuticals.</p>
+                        <div class="card-tags">
+                            <span>Coatings</span>
+                            <span>Inks</span>
+                            <span>Pharma</span>
+                            <span>Packaging</span>
+                        </div>
+                        <a href="#contact" class="primary-btn1 btn-hover product-inquire" data-product="Ethyl Acetate" style="font-size: 11px; padding: 12px 20px; width: 100%; text-align: center; justify-content: center;">Inquire Spec</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 6: INDUSTRIES WE SERVE -->
+    <div class="solution-section mb-130" id="industries" style="background-color: var(--bg-alt); padding: 80px 0;">
+        <div class="container-fluid one">
+            <div class="section-title1 text-center" style="margin: 0 auto 60px auto;">
+                <span>Sectors We Power</span>
+                <h2>Industries We Serve</h2>
+            </div>
+            
+            <div class="eg-slider-wrap" style="grid-template-columns: repeat(4, 1fr); gap: 20px;">
+                <div class="eg-card-2" style="text-align: center; padding: 30px;">
+                    <div class="icon"><i class="fa-solid fa-fill-drip"></i></div>
+                    <div class="content"><h5>Paint & Coatings</h5></div>
+                </div>
+                <div class="eg-card-2" style="text-align: center; padding: 30px;">
+                    <div class="icon"><i class="fa-solid fa-pills"></i></div>
+                    <div class="content"><h5>Pharmaceuticals</h5></div>
+                </div>
+                <div class="eg-card-2" style="text-align: center; padding: 30px;">
+                    <div class="icon"><i class="fa-solid fa-wheat-awn"></i></div>
+                    <div class="content"><h5>Agrochemicals</h5></div>
+                </div>
+                <div class="eg-card-2" style="text-align: center; padding: 30px;">
+                    <div class="icon"><i class="fa-solid fa-print"></i></div>
+                    <div class="content"><h5>Printing Inks</h5></div>
+                </div>
+                <div class="eg-card-2" style="text-align: center; padding: 30px;">
+                    <div class="icon"><i class="fa-solid fa-box-open"></i></div>
+                    <div class="content"><h5>Adhesives</h5></div>
+                </div>
+                <div class="eg-card-2" style="text-align: center; padding: 30px;">
+                    <div class="icon"><i class="fa-solid fa-box"></i></div>
+                    <div class="content"><h5>Packaging</h5></div>
+                </div>
+                <div class="eg-card-2" style="text-align: center; padding: 30px;">
+                    <div class="icon"><i class="fa-solid fa-flask"></i></div>
+                    <div class="content"><h5>Specialty Chemicals</h5></div>
+                </div>
+                <div class="eg-card-2" style="text-align: center; padding: 30px;">
+                    <div class="icon"><i class="fa-solid fa-trowel-bricks"></i></div>
+                    <div class="content"><h5>Construction</h5></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 7: WHY CHOOSE US -->
+    <div class="solution-section mb-130" id="why-choose">
+        <div class="container-fluid one">
+            <div class="row g-4" style="display: flex; gap: 3rem; flex-wrap: wrap;">
+                <div class="col-lg-3" style="flex: 1 1 250px;">
+                    <div class="sub-title mb-4">
+                        <span>Why Choose Us</span>
+                    </div>
+                    <div class="about-img" style="border-radius: 10px; overflow: hidden; height: 350px;">
+                        <img src="images/warehouse-logistics.png" alt="Why Choose Us" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                </div>
+                <div class="col-lg-9" style="flex: 1 1 600px;">
+                    <div class="row">
+                        <div class="col-lg-12 gap-lg-5 gap-4 d-flex align-items-start justify-content-between mb-60" style="display: flex; justify-content: space-between; flex-wrap: wrap;">
+                            <div class="section-title1 one" style="text-align: left; margin-bottom: 0;">
+                                <h2>Have Sourcing Consistency & Logistics Capabilities for B2B Supply.</h2>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 d-flex align-items-center position-relative">
+                            <div class="row g-4 justify-content-end" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; width: 100%;">
+                                <div class="eg-card-2">
+                                    <div class="sl-no"><h3>01</h3></div>
+                                    <div class="content">
+                                        <div class="custom-icon-circles"></div>
+                                        <h5>Quality Assured</h5>
+                                        <p>Sourcing solvents strictly following quality parameters.</p>
+                                    </div>
+                                </div>
+                                <div class="eg-card-2">
+                                    <div class="sl-no"><h3>02</h3></div>
+                                    <div class="content">
+                                        <div class="custom-icon-circles"></div>
+                                        <h5>Reliable Network</h5>
+                                        <p>Strong partnership nodes with industrial chemical plants.</p>
+                                    </div>
+                                </div>
+                                <div class="eg-card-2">
+                                    <div class="sl-no"><h3>03</h3></div>
+                                    <div class="content">
+                                        <div class="custom-icon-circles"></div>
+                                        <h5>Competitive Pricing</h5>
+                                        <p>Highly optimized logistic parameters for margins.</p>
+                                    </div>
+                                </div>
+                                <div class="eg-card-2">
+                                    <div class="sl-no"><h3>04</h3></div>
+                                    <div class="content">
+                                        <div class="custom-icon-circles"></div>
+                                        <h5>Fast Response</h5>
+                                        <p>Quick spec consultations and prompt commercial price sheets.</p>
+                                    </div>
+                                </div>
+                                <div class="eg-card-2">
+                                    <div class="sl-no"><h3>05</h3></div>
+                                    <div class="content">
+                                        <div class="custom-icon-circles"></div>
+                                        <h5>Timely Delivery</h5>
+                                        <p>Rigid container layout planning and dispatch tracking.</p>
+                                    </div>
+                                </div>
+                                <div class="eg-card-2">
+                                    <div class="sl-no"><h3>06</h3></div>
+                                    <div class="content">
+                                        <div class="custom-icon-circles"></div>
+                                        <h5>Customer First</h5>
+                                        <p>Aligning with volume requests and customized financing terms.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 8: SOURCING & SUPPLY NETWORK -->
+    <div class="solution-section mb-130" id="network" style="background-color: var(--bg-alt); padding: 80px 0;">
+        <div class="container-fluid one">
+            <div class="row align-items-center" style="display: flex; gap: 3rem; flex-wrap: wrap;">
+                <div class="col-lg-6" style="flex: 1 1 450px;">
+                    <div class="section-title1 two">
+                        <span>Procurement Desk</span>
+                        <h2>Our Supply Chain Strength</h2>
+                    </div>
+                    <p class="mb-20">We work with reputed manufacturers and suppliers across India to ensure consistent product availability and competitive pricing.</p>
+                    <div class="card-tags" style="margin-top: 1.5rem;">
+                        <span>✔ Strong Procurement</span>
+                        <span>✔ Multiple Supplier Base</span>
+                        <span>✔ Inventory Planning</span>
+                        <span>✔ Quick Dispatch</span>
+                        <span>✔ Bulk Sourcing</span>
+                    </div>
+                </div>
+                <div class="col-lg-6" style="flex: 1 1 450px;">
+                    <div class="banner-bottom-img" style="height: 360px; overflow: hidden; display: flex; align-items: center; justify-content: center; border: 1px solid var(--border-color);">
+                        <img src="images/network-map.png" alt="Sourcing & Sourcing Network Map" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 9: EXPORT & LOGISTICS -->
+    <div class="solution-section mb-130" id="logistics">
+        <div class="container-fluid one">
+            <div class="section-title1 text-center" style="margin: 0 auto 60px auto;">
+                <span>Export Operations</span>
+                <h2>Export & Logistics Support</h2>
+            </div>
+            
+            <div class="row g-4" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; width: 100%;">
+                <div class="eg-card-2" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                    <div style="height: 180px; width: 100%; overflow: hidden;">
+                        <img src="images/global-deal.png" alt="Export Documentation" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div style="padding: 30px;">
+                        <div class="content">
+                            <div class="custom-icon-circles"></div>
+                            <h5>Export Documentation</h5>
+                            <p>Handling complete customs clearing filings, MSDS specifications, and certificates of analysis (COA).</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="eg-card-2" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                    <div style="height: 180px; width: 100%; overflow: hidden;">
+                        <img src="images/cargo-ship.png" alt="Container & Drum Planning" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div style="padding: 30px;">
+                        <div class="content">
+                            <div class="custom-icon-circles"></div>
+                            <h5>Container & Drum Planning</h5>
+                            <p>Optimizing space layouts and executing premium steel drum packaging for transport safety.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="eg-card-2" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                    <div style="height: 180px; width: 100%; overflow: hidden;">
+                        <img src="images/iso-tank.png" alt="Bulk Tanker Logistics" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div style="padding: 30px;">
+                        <div class="content">
+                            <div class="custom-icon-circles"></div>
+                            <h5>Bulk Tanker Logistics</h5>
+                            <p>Coordinating direct bulk chemical ISO tank containers and road tanker dispatches directly to industrial clients.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 10: OUR COMMITMENT -->
+    <div class="about-section2 mb-130" id="commitment">
+        <div class="container-fluid one">
+            <div class="row align-items-center" style="display: flex; gap: 3rem; flex-wrap: wrap;">
+                <div class="col-lg-7" style="flex: 1 1 500px;">
+                    <div class="about-content pr--95">
+                        <div class="section-title1 two white mb-50">
+                            <span>Ethics & Quality</span>
+                            <h2>Our Sourcing Commitment</h2>
+                        </div>
+                        <p class="text-white mb-20">We build our operations around safety parameters, strict chemical assays, and complete transparency.</p>
+                        
+                        <div class="review-and-feature" style="margin-top: 30px;">
+                            <ul class="features">
+                                <li>Ethical Business Practices</li>
+                                <li>Transparent Communication</li>
+                                <li>Consistent Quality Solvents</li>
+                                <li>Timely Deliveries</li>
+                                <li>Long-Term Partnerships</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5" style="flex: 1 1 350px;">
+                    <div class="about-img" style="height: 380px; overflow: hidden; border-radius: var(--border-radius-lg);">
+                        <img src="images/tanker-truck.png" alt="Commitment Tanker Truck" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- PAGE 11: BUSINESS ADVANTAGES (Stats ribbon adapted) -->
+            <div class="about-bottom">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="about-counter-area">
+                            <ul class="counter-wrap">
+                                <li class="single-counter">
+                                    <div class="icon"><i class="fa-solid fa-users"></i></div>
+                                    <div class="content">
+                                        <div class="number">
+                                            <h2 class="count-digit" data-target="500">0</h2>
+                                            <span>+</span>
+                                        </div>
+                                        <p>Clients Sourced</p>
+                                    </div>
+                                </li>
+                                <li class="single-counter">
+                                    <div class="icon"><i class="fa-solid fa-business-time"></i></div>
+                                    <div class="content">
+                                        <div class="number">
+                                            <h2 class="count-digit" data-target="10">0</h2>
+                                            <span>+</span>
+                                        </div>
+                                        <p>Years Sourcing</p>
+                                    </div>
+                                </li>
+                                <li class="single-counter">
+                                    <div class="icon"><i class="fa-solid fa-map-location-dot"></i></div>
+                                    <div class="content">
+                                        <div class="number">
+                                            <h2 class="count-digit" data-target="25">0</h2>
+                                            <span>+</span>
+                                        </div>
+                                        <p>Cities Supplied</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 11: BUSINESS ADVANTAGES -->
+    <div class="solution-section mb-130" id="advantages">
+        <div class="container-fluid one">
+            <div class="section-title1 text-center" style="margin: 0 auto 60px auto;">
+                <span>Corporate Value</span>
+                <h2>Business Advantages</h2>
+            </div>
+            
+            <div class="row g-4" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; width: 100%;">
+                <div class="eg-card-2" style="background-color: var(--bg-alt);">
+                    <div class="content">
+                        <h5 style="color: var(--secondary-color); font-weight:700;">Quick Quotation</h5>
+                        <p>Prompt inquiry responses and price sheets aligned with international petrochemical indicators.</p>
+                    </div>
+                </div>
+                <div class="eg-card-2" style="background-color: var(--bg-alt);">
+                    <div class="content">
+                        <h5 style="color: var(--secondary-color); font-weight:700;">Flexible Supply</h5>
+                        <p>Configuring customized dispatches to match your logistics - mixed container drums or bulk tank deliveries.</p>
+                    </div>
+                </div>
+                <div class="eg-card-2" style="background-color: var(--bg-alt);">
+                    <div class="content">
+                        <h5 style="color: var(--secondary-color); font-weight:700;">Market Intelligence</h5>
+                        <p>Providing direct commercial briefings on container freight indexes and solvent availability changes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 12: CONTACT US / ENQUIRY (contect-section6) -->
+    <div class="contect-section6 pb-130" id="contact">
+        <div class="container-fluid one">
+            <div class="row g-lg-4 gy-5" style="display: flex; gap: 3rem; flex-wrap: wrap;">
+                <div class="col-lg-5" style="flex: 1 1 400px;">
+                    <div class="section-title1 two">
+                        <span>Enquiry Desk</span>
+                        <h2>Let's Grow Together</h2>
+                        <p style="margin-top: 1.5rem; font-size: 16px;">Complete the form on the right, and our procurement department will respond promptly with spec sheets and quotes.</p>
+                    </div>
+                    
+                    <div class="single-counter" style="margin-top: 2.5rem; gap: 15px;">
+                        <i class="fa-solid fa-location-dot" style="font-size: 24px; color: var(--secondary-color);"></i>
+                        <div>
+                            <h4 style="font-size: 16px; margin-bottom: 0; text-transform: uppercase;">Corporate Office</h4>
+                            <p style="font-size: 14px;">S-111, GIDC Multilevel Shed-3, Near Advance Paint, Ankleshwar, Gujarat, India - 393002</p>
+                        </div>
+                    </div>
+                    <div class="single-counter" style="margin-top: 1.5rem; gap: 15px;">
+                        <i class="fa-solid fa-user-shield" style="font-size: 24px; color: var(--secondary-color);"></i>
+                        <div>
+                            <h4 style="font-size: 16px; margin-bottom: 0; text-transform: uppercase;">HR Vekariya</h4>
+                            <p style="font-size: 14px;">Global Business Head</p>
+                            <p style="font-size: 14px; font-weight: 600; color: var(--secondary-color);"> exports@purvodaychemicals.com</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-7" style="flex: 1 1 500px;">
+                    <div class="contact-form-area">
+                        <form id="purvoday-form" novalidate>
+                            <div class="row" style="display: flex; flex-direction: column; gap: 20px;">
+                                <div class="form-inner">
+                                    <label>Company Name <sup class="text-danger">*</sup></label>
+                                    <input type="text" id="company-name" placeholder="ABC Corp" required />
+                                </div>
+                                <div class="form-inner">
+                                    <label>Corporate Email <sup class="text-danger">*</sup></label>
+                                    <input type="email" id="company-email" placeholder="purchasing@company.com" required />
+                                </div>
+                                <div class="form-inner">
+                                    <label>Product of Interest <sup class="text-danger">*</sup></label>
+                                    <select id="product-select" required>
+                                        <option value="" disabled selected>Select chemical</option>
+                                        <option value="Toluene">Toluene</option>
+                                        <option value="Isopropyl Alcohol">Isopropyl Alcohol (IPA)</option>
+                                        <option value="Acetone">Acetone</option>
+                                        <option value="Ethyl Acetate">Ethyl Acetate</option>
+                                    </select>
+                                </div>
+                                <div class="form-inner">
+                                    <label>Custom Specifications / Target Volumes <sup class="text-danger">*</sup></label>
+                                    <textarea id="spec-message" placeholder="Specify drum packing or bulk tankers, target purity percentage, destination port..." required style="height: 110px;"></textarea>
+                                </div>
+                                <button type="submit" class="primary-btn1 btn-hover" style="justify-content: center; width: 100%;">
+                                    Submit Sourcing Enquiry
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.1865 1.06237L0 11.2484L0.751627 12L10.9376 1.81347V8.85645H12V0H3.14355V1.06237H10.1865Z" />
+                                    </svg>
+                                    <span></span>
+                                </button>
+                            </div>
+                        </form>
+                        
+                        <div id="enquiry-success" style="display: none; color: #10b981; font-weight: 700; text-align: center; margin-top: 1.5rem;">
+                            <i class="fa-solid fa-circle-check"></i> Sourcing inquiry sent successfully! Our commercial desk will contact you.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER AREA -->
+    <footer>
+        <div class="container-fluid one">
+            <div class="row footer-top" style="display: flex; gap: 3rem; flex-wrap: wrap;">
+                <div class="col-lg-4" style="flex: 1 1 300px;">
+                    <div class="footer-widget">
+                        <div class="logo">
+                            <a href="#home" class="logo" style="text-decoration:none; display: flex; align-items: center; background: white; padding: 6px 12px; border-radius: 4px; max-width: fit-content;">
+                                <img src="images/logo.png" alt="Purvoday Chemicals LLP" style="max-height: 38px; width: auto; object-fit: contain;">
+                            </a>
+                        </div>
+                        <p style="margin-top: 1.5rem;">Gujarat-based chemical distributor specializing in industrial solvents and B2B chemical trading globally.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3" style="flex: 1 1 200px;">
+                    <div class="footer-widget">
+                        <div class="widget-title">
+                            <h3>Our Products</h3>
+                        </div>
+                        <div class="menu-container">
+                            <ul>
+                                <li><a href="#portfolio">Toluene</a></li>
+                                <li><a href="#portfolio">Isopropyl Alcohol (IPA)</a></li>
+                                <li><a href="#portfolio">Acetone</a></li>
+                                <li><a href="#portfolio">Ethyl Acetate</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3" style="flex: 1 1 200px;">
+                    <div class="footer-widget">
+                        <div class="widget-title">
+                            <h3>Company</h3>
+                        </div>
+                        <div class="menu-container">
+                            <ul>
+                                <li><a href="#about">About Us</a></li>
+                                <li><a href="#who-we-are">Who We Are</a></li>
+                                <li><a href="#network">Sourcing Network</a></li>
+                                <li><a href="#commitment">Commitment</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-btm">
+                <div class="copyright-area">
+                    <p>&copy; 2026 <a href="#home">Purvoday Chemicals LLP</a>. All rights reserved.</p>
+                </div>
+                <div class="copyright-area">
+                    <p>Registered Office: Ankleshwar, Gujarat, India.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS Logic script -->
+    <script src="app.js"></script>
+</body>
+</html>

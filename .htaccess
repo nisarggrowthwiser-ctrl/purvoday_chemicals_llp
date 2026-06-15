@@ -1,0 +1,4 @@
+RewriteEngine On
+
+# Serve /certificates as the certificates page
+RewriteRule ^certificates/?$ certificates/index.html [L]
