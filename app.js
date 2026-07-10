@@ -612,4 +612,25 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     }
+
+    /* --- GLOBAL GET IN TOUCH FORM --- */
+    const enquiryForm = document.getElementById('purvoday-form');
+    if (enquiryForm) {
+        enquiryForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            if (!enquiryForm.checkValidity()) {
+                enquiryForm.reportValidity();
+                return;
+            }
+            
+            // Redirect to thank-you page checking directory level
+            const path = window.location.pathname;
+            if (path.includes('/products/') || path.includes('/certificates/') || path.includes('/purvoday-chemicals/')) {
+                window.location.href = '../thank-you.html';
+            } else {
+                window.location.href = 'thank-you.html';
+            }
+        });
+    }
 });
+

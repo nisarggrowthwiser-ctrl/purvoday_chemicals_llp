@@ -286,15 +286,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 enquiryForm.style.opacity = '0.5';
                 
                 setTimeout(() => {
-                    enquiryForm.style.opacity = '1';
-                    enquiryForm.style.display = 'none';
-                    successMsg.style.display = 'block';
-                    enquiryForm.reset();
-                    
-                    setTimeout(() => {
-                        successMsg.style.display = 'none';
-                        enquiryForm.style.display = 'block';
-                    }, 5000);
+                    window.location.href = "../thank-you.html";
                 }, 1000);
             } else {
                 const contactCard = document.querySelector('.contact-form-area');
